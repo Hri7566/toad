@@ -1,0 +1,17 @@
+{
+  "name": "toad",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "level": "^10.0.0",
+    "mpp-client-net": "^1.2.3",
+    "yaml": "^2.8.0"
+  }
+}

@@ -1,0 +1,85 @@
+- id: toad
+  name: Toad
+  description: A friendly toad
+  emoji: 🐸
+  sellValue: 15
+- id: worm
+  name: Worm
+  description: A little worm in the dirt
+  emoji: 🪱
+  sellValue: 3
+- id: inchworm
+  name: Inchworm
+  description: A little green worm on a stick
+  emoji: 🐛
+  sellValue: 3
+- id: caterpillar
+  name: Caterpillar
+  description: A fuzzy caterpillar on a leaf
+  emoji: 🐛
+  sellValue: 5
+- id: butterfly
+  name: Butterfly
+  description: A butterfly in the air
+  emoji: 🦋
+  sellValue: 10
+- id: dragonfly
+  name: Dragonfly
+  description: A dragonfly in a puddle
+  emoji: 🐉
+  sellValue: 5
+- id: snail
+  name: Snail
+  description: A snail in a shell
+  emoji: 🐌
+  sellValue: 10
+- id: ant
+  name: Ant
+  description: A little marching ant
+  emoji: 🐜
+  sellValue: 3
+- id: bee
+  name: Bee
+  description: A bee on a flower
+  emoji: 🐝
+  sellValue: 10
+- id: ladybug
+  name: Ladybug
+  description: A ladybug on a leaf
+  emoji: 🐞
+  sellValue: 5
+- id: cockroach
+  name: Cockroach
+  description: A cockroach on a log
+  emoji: 🪳
+  sellValue: 3
+- id: mosquito
+  name: Mosquito
+  description: A dangerous mosquito
+  emoji: 🦟
+  sellValue: 1
+- id: fly
+  name: Fly
+  description: A buzzing fly
+  emoji: 🪰
+  sellValue: 1
+- id: beetle
+  name: Beetle
+  description: A beetle on a sprout
+  emoji: 🪲
+  sellValue: 20
+- id: grasshopper
+  name: Grasshopper
+  description: A grasshopper in the grass
+  emoji: 🦗
+  sellValue: 5
+- id: cricket
+  name: Cricket
+  description: A cricket in the leaves
+  emoji: 🦗
+  sellValue: 5
+- id: spider
+  name: Spider
+  description: A spider on a web
+  emoji: 🕷️
+  sellValue: 5
