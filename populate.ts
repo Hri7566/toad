@@ -13,9 +13,9 @@ for (const bug of bugs) {
     db.put(`bug:${bug.id}`, JSON.stringify(bug));
 }
 
-// const itemData = readFileSync(join(__dirname, "items.yml"), "utf8");
-// const items = YAML.parse(itemData);
+const itemData = readFileSync(join(__dirname, "items.yml"), "utf8");
+const items = YAML.parse(itemData);
 
-// for (const item of items) {
-//     db.put(`item:${item.id}`, JSON.stringify(item));
-// }
+for (const item of items) {
+    db.put(`item:${item.id}`, JSON.stringify(item));
+}

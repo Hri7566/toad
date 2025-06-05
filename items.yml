@@ -1,0 +1,10 @@
+- id: hammer
+  name: Hammer
+  description: A hammer to bonk with
+  emoji: 🔨
+- id: burger
+  name: Burger
+  description: A burger
+  emoji: 🍔
+  sellValue: 10
+  edible: true

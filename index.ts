@@ -33,6 +33,7 @@ interface Item {
     name: string;
     amount: number;
     sellValue: number;
+    edible?: true;
 }
 
 interface ShopItem {
@@ -562,6 +563,10 @@ commandGroups.set(
             "bal",
             "command.bal",
             async ctx => {
+                if (typeof ctx.user.nickels !== "number") {
+                    ctx.user.nickels = 0;
+                    await saveUser(ctx.user);
+                }
                 return `You have ${formatBalance(ctx.user.nickels)}`;
             }
         ),
@@ -594,6 +599,35 @@ commandGroups.set(
                 return `Sold ${formatItem(item as Item)} for ${formatBalance(
                     item.sellValue
                 )}`;
+            }
+        ),
+        new Command(
+            ["eat", "e"],
+            "Eat an item from your bag",
+            "eat",
+            "command.eat",
+            async ctx => {
+                const arg = ctx.args[1];
+                if (!arg) return `check the ${ctx.usedPrefix}bag please`;
+
+                const item = ctx.user.inventory.find(item => {
+                    return item.name.toLowerCase() === arg.toLowerCase();
+                }) as Bug | Item;
+
+                if (!item)
+                    return `I don't have an item called "${ctx.args[1]}"`;
+
+                const itemIndex = ctx.user.inventory.indexOf(item);
+                if (itemIndex === -1)
+                    return `The item "${item.name}" is not in your bag.`;
+
+                if (!(item as Item).edible) return "This item cannot be eaten.";
+
+                ctx.user.inventory.splice(itemIndex, 1);
+                ctx.user.nickels += item.sellValue;
+                await saveUser(ctx.user);
+
+                return `Eaten ${formatItem(item as Item)}`;
             }
         )
     ])
